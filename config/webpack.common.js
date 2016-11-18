@@ -2,6 +2,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var helpers = require('./helpers');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -48,6 +49,12 @@ module.exports = {
 
         new HtmlWebpackPlugin({
             template: 'src/index.html'
-        })
+        }),
+
+        new CopyWebpackPlugin([
+          {
+            from: 'src/materialize.js', to: './'
+          }
+        ])
     ]
 };
