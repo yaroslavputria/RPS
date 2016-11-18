@@ -1,15 +1,14 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
-import { RPSService } from './services/rps.service';
+import '../css/main.css';
 
 @Component({
-  selector: 'rps-app',
-  templateUrl: './src/app/app.component.html'
+    selector: 'my-app',
+    template: require('./app.component.html')
 })
+
 export class AppComponent implements OnInit {
-  constructor(private rpsService: RPSService){}
-  title = 'Rock Paper Scissors';
-  ngOnInit(): void {
-    console.dir(this);
-  }
+    ngOnInit() {
+        console.log('AppComponent initializing...');
+    }
 }
