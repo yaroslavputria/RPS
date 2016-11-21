@@ -1,17 +1,16 @@
 language: node_js
 node_js:
-  - "5"
+  - "6"
 install:
  - npm i
 before_script:
-- npm run postinstall
-- "export DISPLAY=:99.0"
+# - "export DISPLAY=:99.0"
 
-- "sh -e /etc/init.d/xvfb start"
-- nohup bash -c "./nodemodules/protractor/bin/webdriver-manager start 2>&1 &"
-- sleep 5
-script:
-  # - npm run lint
-  - npm run test
-
-  - npm run e2e
+# - "sh -e /etc/init.d/xvfb start"
+# - nohup bash -c "./nodemodules/protractor/bin/webdriver-manager start 2>&1 &"
+# - sleep 5
+# script:
+ - npm run lint
+ - npm run test
+ - npm run postinstall
+ - npm start & npm run e2e
