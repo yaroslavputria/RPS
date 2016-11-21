@@ -16,4 +16,8 @@ before_script:
 # - npm run lint
  - npm run test
  - npm run postinstall
+ - "export DISPLAY=:99.0"
+ - "sh -e /etc/init.d/xvfb start"
+ - nohup bash -c "./nodemodules/protractor/bin/webdriver-manager start 2>&1 &"
+ - sleep 5
  - npm start & npm run e2e
