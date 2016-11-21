@@ -10,7 +10,7 @@ import "angular2-materialize";
 
 @Component({
   selector: 'rps-app',
-  templateUrl: './src/app/app.component.html'
+  template: require('./app.component.html')
 })
 export class AppComponent implements OnInit {
   constructor(private rpsService: RPSService){}

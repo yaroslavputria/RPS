@@ -7,19 +7,19 @@ describe('App', () => {
 
     it('should have a title', () => {
         let subject = browser.getTitle();
-        let result = 'Angular2 + TypeScript';
+        let result = 'RPS';
         expect(subject).toEqual(result);
     });
 
-    it('should have header', () => {
+    it('shouldn\'t have header', () => {
         let subject = element(by.tagName('h1')).isPresent();
-        expect(subject).toEqual(true);
+        expect(subject).toEqual(false);
     });
 
-    it('should have correct header text', () => {
-        let subject = element(by.tagName('h1'));
-        expect(subject.getText()).toBe('My Angular2 + TypeScript App');
-    });
+    // it('should have correct header text', () => {
+    //     let subject = element(by.tagName('h1'));
+    //     expect(subject.getText()).toBe('My Angular2 + TypeScript App');
+    // });
 
     it('should have footer', () => {
         let subject = element(by.tagName('footer')).isPresent();
