@@ -10,7 +10,10 @@ before_script:
 # - nohup bash -c "./nodemodules/protractor/bin/webdriver-manager start 2>&1 &"
 # - sleep 5
 # script:
- - npm run lint
+
+
+
+# - npm run lint
  - npm run test
  - npm run postinstall
  - npm start & npm run e2e
