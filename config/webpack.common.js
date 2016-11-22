@@ -53,7 +53,7 @@ module.exports = {
 
         new CopyWebpackPlugin([
           {
-            from: 'src/materialize.js', to: './'
+            from: 'src/favicon.ico', to: './'
           }
         ])
     ]

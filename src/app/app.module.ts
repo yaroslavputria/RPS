@@ -1,23 +1,27 @@
+import "materialize-css";
+import "angular2-materialize";
+
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-// import "materialize-css";
-// import "angular2-materialize";
-
-// import { MaterializeDirective } from "angular2-materialize";
+import { routing, appRoutingProviders } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { routing, appRoutingProviders } from './app.routing';
-// import { HomeComponent } from './home/home.component';
-// import { AboutComponent } from './about/about.component';
-import { RPSService } from './services/rps.service';
 import { MaincardComponent } from './maincard/maincard.component';
+import { MainformComponent } from './mainform/mainform.component';
+import { GamespaceComponent } from './gamespace/gamespace.component';
+
+//import { MaterializeDirective } from "angular2-materialize";
+
+import { RPSService } from './services/rps.service';
 
 @NgModule({
     declarations: [
         AppComponent,
         MaincardComponent,
-        // MaterializeDirective
+        MainformComponent,
+        GamespaceComponent,
+//        MaterializeDirective
         // HomeComponent,
         // AboutComponent
     ],
