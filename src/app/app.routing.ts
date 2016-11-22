@@ -8,9 +8,9 @@ import { GamespaceComponent } from './gamespace/gamespace.component';
 // import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
-     { path: '', component: MaincardComponent },
-     { path: 'mainform', component: MainformComponent },
-     { path: 'gamespace', component: GamespaceComponent }
+  { path: '', component: MaincardComponent },
+  { path: 'mainform', component: MainformComponent },
+  { path: 'gamespace', component: GamespaceComponent }
 ];
 
 export const appRoutingProviders: any[] = [];
