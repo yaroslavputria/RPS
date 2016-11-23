@@ -1,7 +1,7 @@
 var helpers = require('./helpers');
 
 module.exports = {
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
 
   resolve: {
     extensions: ['', '.ts', '.js']
