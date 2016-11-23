@@ -1,5 +1,5 @@
-import "materialize-css";
-import "angular2-materialize";
+import 'materialize-css';
+import 'angular2-materialize';
 
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -11,7 +11,7 @@ import { MaincardComponent } from './maincard/maincard.component';
 import { MainformComponent } from './mainform/mainform.component';
 import { GamespaceComponent } from './gamespace/gamespace.component';
 
-//import { MaterializeDirective } from "angular2-materialize";
+// import { MaterializeDirective } from "angular2-materialize";
 
 import { RPSService } from './services/rps.service';
 
@@ -21,7 +21,7 @@ import { RPSService } from './services/rps.service';
         MaincardComponent,
         MainformComponent,
         GamespaceComponent,
-//        MaterializeDirective
+        // MaterializeDirective
         // HomeComponent,
         // AboutComponent
     ],

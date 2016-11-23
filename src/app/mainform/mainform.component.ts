@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'mainform',
   template: require('./mainform.component.html')
 })
-export class MainformComponent{
-  constructor(){}
+export class MainformComponent {
+  constructor() {}
 }

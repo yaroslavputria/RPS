@@ -1,7 +1,7 @@
 {
   "name": "rps",
   "version": "0.1.0",
-  "description": "My Angular2-TypeScript App",
+  "description": "RockPaperScissors game",
   "keywords": [
     "angular2",
     "typescript",
@@ -29,6 +29,7 @@
     "materialize-css": "^0.97.8",
     "reflect-metadata": "^0.1.8",
     "rxjs": "5.0.0-beta.12",
+    "typescript": "^1.9.0-dev.20160627-1.0",
     "zone.js": "^0.6.25"
   },
   "devDependencies": {
@@ -36,7 +37,7 @@
     "@types/node": "^6.0.45",
     "@types/protractor": "^1.5.20",
     "@types/selenium-webdriver": "2.44.29",
-    "codelyzer": "0.0.19",
+    "codelyzer": "0.0.17",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.23.1",
     "extract-text-webpack-plugin": "^1.0.1",
@@ -58,8 +59,8 @@
     "rimraf": "^2.5.2",
     "style-loader": "^0.13.1",
     "ts-loader": "^0.8.1",
-    "tslint": "^3.13.0",
-    "typescript": "^2.0.3",
+    "tslint": "^3.11.0",
+    "typescript": "1.9.0-dev.20160308",
     "webpack": "^1.13.1",
     "webpack-dev-server": "^1.14.1",
     "webpack-merge": "^0.14.0"

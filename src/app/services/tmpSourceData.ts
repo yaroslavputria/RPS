@@ -1,10 +1,10 @@
-//тимчасовий масив статистики
+// тимчасовий масив статистики
 let arrOfStats: any[] = [];
 for (let i = 0; i < 3; i++) {
   for (let j = 0; j < 3; j++) {
     for (let k = 0; k < 3; k++) {
       for (let l = 0; l < 3; l++) {
-        let tmpIndex = "" + i + j + k + l;
+        let tmpIndex = '' + i + j + k + l;
         arrOfStats[tmpIndex] = {
           0: randomInteger(0, 1),
           1: randomInteger(0, 1),
@@ -15,10 +15,10 @@ for (let i = 0; i < 3; i++) {
   };
 };
 
-//тимчасовий масив ходів
+// тимчасовий масив ходів
 let arrOfMoves: any[] = [];
 for (let i = 0; i < 20; i++) {
-  arrOfMoves.push("" + randomInteger(0, 2) + randomInteger(0, 2));
+  arrOfMoves.push('' + randomInteger(0, 2) + randomInteger(0, 2));
 };
 
 
@@ -37,7 +37,7 @@ for (let i = 0; i < 20; i++) {
 export { arrOfStats, arrOfMoves };
 
 function randomInteger(min: number, max: number): number {
-  let rand = min + Math.random() * (max - min)
+  let rand = min + Math.random() * (max - min);
   rand = Math.round(rand);
   return rand;
 };

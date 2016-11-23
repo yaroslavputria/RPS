@@ -6,6 +6,6 @@ import { RPSService } from '../services/rps.service';
   selector: 'gamespace',
   template: require('./gamespace.component.html')
 })
-export class GamespaceComponent{
-  constructor(private rpsService: RPSService){}
+export class GamespaceComponent {
+  constructor(private rpsService: RPSService) {}
 }

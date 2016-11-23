@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-//import { Http, Response } from '@angular/http';
+// import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import { arrOfStats, arrOfMoves } from './tmpSourceData';
 
 @Injectable()
 export class RPSService {
-//  constructor(private http: Http) {}
+// constructor(private http: Http) {}
 
   arrOfStats: any[] = arrOfStats;
   arrOfMoves: any[] = arrOfMoves;
 
-  //звернення до статистики
-  userHandFromStats(currentSituation: string): number{
+  // звернення до статистики
+  userHandFromStats(currentSituation: string): number {
     let result = 0;
     let tmp = this.arrOfStats[currentSituation][result];
     for (let i = 1; i < 3; i++) {
@@ -21,7 +21,7 @@ export class RPSService {
         result = i;
       };
     };
-    return result; //повертає руку, яку найчастіше використовує гравець "за даних обставин"
+    return result; // повертає руку, яку найчастіше використовує гравець "за даних обставин"
   };
 
   // вибір ходу пк відносно ходу гравця зі статистики
@@ -30,12 +30,12 @@ export class RPSService {
       return 1;
     } else if (userHand === 1) {
       return 2;
-    } else if (userHand === 2){
+    } else if (userHand === 2) {
       return 0;
     }
   };
 
-  // //поточне значення руки гравця
+  // // поточне значення руки гравця
   // myCurrentHand() {
   //   var myMove = myHand.children()[0].classList;
   //   if (myMove.contains("fa-hand-rock-o")) {

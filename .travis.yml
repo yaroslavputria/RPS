@@ -13,7 +13,7 @@ before_script:
 
 
 
- # - npm run lint
+ - npm run lint
  - npm run test
  # - npm run postinstall
  # - "export DISPLAY=:99.0"
