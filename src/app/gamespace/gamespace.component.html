@@ -5,50 +5,59 @@
         <h2>You</h2>
       </div>
       <div class="col s4 push-s1">
-        <h2><span class="score" id="myScore">{{myScore}}</span>:<span class="score" id="PSScore">{{pcScore}}</span></h2>
+        <h2><span class="score" id="myScore">{{userScore}}</span>:<span class="score" id="PSScore">{{pcScore}}</span></h2>
       </div>
       <div class="col s3 push-s1">
         <h2>PC</h2>
       </div>
     </div>
-    <div class="row" id="stepConditionRow" hidden>
+<!--     <div class="row" id="stepConditionRow" hidden>
       <div class="col s12">
-        <h2 id="stepCondition">Chose your hand!<!-- You won! --></h2>
+        <h2 id="stepCondition">Chose your hand!</h2>
       </div>
-    </div>
+    </div> -->
     <div class="row" id="againstPCRow">
-      <div class="col s6">
-        <div id="myHand" class="container rps-window waves-light waves-effect">
-          <!-- <i class="fa fa-hand-scissors-o fa-flip-horizontal"></i> -->
-          <b class="fa">?</b>
+
+      <div>
+        <div [hidden]="showOptions" class="col s6">
+          <div id="myHand" class="container rps-window-option waves-light waves-effect" (click)="preMove()">
+            <!-- <i class="fa fa-hand-scissors-o fa-flip-horizontal"></i> -->
+            <i #userHand class="fa fa-question"></i>
+          </div>
+        </div>
+        <div [hidden]="showOptions" class="col s6">
+          <div id="pcHand" class="container rps-window-option">
+            <!-- <i class="fa fa-question-circle"></i> -->
+            <i #pcHand class="fa fa-desktop"></i>
+          </div>
         </div>
       </div>
-      <div class="col s6">
-        <div id="pcHand" class="container rps-window">
-          <!-- <i class="fa fa-question-circle"></i> -->
-          <i class="fa fa-hashtag"></i>
-        </div>
-      </div>
-      <div class="col s12 center-align">
-        <h2><span class="score" id="myScore">{{resMessage}}</span></h2>
-      </div>
-    </div>
-    <div class="row" id="rpsOptionsRow" hidden>
-      <div class="col s4">
-        <div class="container rps-window-option waves-effect waves-light" id="rpsOption0">
+
+      <div [hidden]="!showOptions" class="col s4">
+        <div class="container rps-window-option waves-effect waves-light" (click)="move($event, userHand, pcHand)" id="rps0">
           <i class="fa fa-hand-rock-o"></i>
         </div>
       </div>
-      <div class="col s4">
-        <div class="container rps-window-option waves-effect waves-light" id="rpsOption1">
+      <div [hidden]="!showOptions" class="col s4">
+        <div class="container rps-window-option waves-effect waves-light" (click)="move($event, userHand, pcHand)" id="rps1">
           <i class="fa fa-hand-paper-o"></i>
         </div>
       </div>
-      <div class="col s4">
-        <div class="container rps-window-option waves-effect waves-light" id="rpsOption2">
+      <div [hidden]="!showOptions" class="col s4">
+        <div class="container rps-window-option waves-effect waves-light" (click)="move($event, userHand, pcHand)" id="rps2">
           <i class="fa fa-hand-scissors-o fa-flip-horizontal"></i>
         </div>
       </div>
+
+      <div class="col s12 center-align">
+        <h2 id="stepCondition">{{bottomMes}}</h2>
+      </div>
     </div>
+
+<!-- hand options -->
+
+<!--     <div class="row" id="rpsOptionsRow" hidden>
+
+    </div> -->
   </div>
 </div>

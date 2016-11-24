@@ -1,3 +1,7 @@
+body {
+  min-width: 250px;
+}
+
 .row {
   margin: 0;
 }
@@ -72,18 +76,22 @@ main .game-space {
 }
 main .game-space .rps-window {
   background: #B2EBF2;
-  font-size: 14rem;
+  font-size: 10rem;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   color: #FFC107;
 }
-main .game-space #myHand {
+/*main .game-space #myHand {
   cursor: pointer;
-}
-main .game-space #myHand:hover {
+}*/
+/*main .game-space #myHand:hover {
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+}*/
 main .game-space #pcHand {
   color: #000000;
+  cursor: auto;
+}
+main .game-space #pcHand:hover {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 main .game-space .rps-window-option {
   background: #B2EBF2;
@@ -164,5 +172,11 @@ footer .footer-copyright {
   }
   main .game-space .rps-window-option {
     font-size: 4.2rem !important;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  main .game-space .rps-window-option {
+    font-size: 3rem !important;
   }
 }

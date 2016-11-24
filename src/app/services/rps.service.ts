@@ -2,22 +2,18 @@ import { Injectable } from '@angular/core';
 // import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
-import { arrOfStats, arrOfMoves } from './tmpSourceData';
-
 @Injectable()
 export class RPSService {
 // constructor(private http: Http) {}
 
-  arrOfStats: any[] = arrOfStats;
-  arrOfMoves: any[] = arrOfMoves;
 
   // звернення до статистики
-  userHandFromStats(currentSituation: string): number {
+  userHandFromStats(arrOfStats: string[], currentSituation: string): number {
     let result = 0;
-    let tmp = this.arrOfStats[currentSituation][result];
+    let tmp = arrOfStats[currentSituation][result];
     for (let i = 1; i < 3; i++) {
-      if (this.arrOfStats[currentSituation][i] > tmp) {
-        tmp = this.arrOfStats[currentSituation][i];
+      if (arrOfStats[currentSituation][i] > tmp) {
+        tmp = arrOfStats[currentSituation][i];
         result = i;
       };
     };
