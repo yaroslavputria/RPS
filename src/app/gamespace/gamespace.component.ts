@@ -13,9 +13,12 @@ export class GamespaceComponent {
 
   arrOfStats: any[] = arrOfStats;
   arrOfMoves: any[] = arrOfMoves;
-  currentSituation: string = '' + this.rpsService.randomInteger(0, 2) + this.rpsService.randomInteger(0, 2) + this.rpsService.randomInteger(0, 2) + this.rpsService.randomInteger(0, 2);
+  currentSituation: string = '' + this.rpsService.randomInteger(0, 2)
+    + this.rpsService.randomInteger(0, 2)
+    + this.rpsService.randomInteger(0, 2)
+    + this.rpsService.randomInteger(0, 2);
 
-  bottomMes: string = 'nothing yet';
+  bottomMes: string = 'Press your icon to start!';
   userScore: number = 0;
   pcScore: number = 0;
 
@@ -28,7 +31,7 @@ export class GamespaceComponent {
       this.stopper = true;
 
       setTimeout(() => {
-        this.bottomMes = 'Chose your hand';
+        this.bottomMes = 'Chose your hand!';
         this.showOptions = true;
         this.stopper = false;
       }, 300);
@@ -69,9 +72,13 @@ export class GamespaceComponent {
   getResOfMove(userHand: number, pcHand: number): number {
     if (pcHand === userHand) {
       return 2;
-    } else if ((userHand === 0 && pcHand === 2) || (userHand === 2 && pcHand === 1) || (userHand === 1 && pcHand === 0)) {
+    } else if ((userHand === 0 && pcHand === 2)
+        || (userHand === 2 && pcHand === 1)
+        || (userHand === 1 && pcHand === 0)) {
       return 0;
-    } else if ((userHand === 2 && pcHand === 0) || (userHand === 1 && pcHand === 2) || (userHand === 0 && pcHand === 1)) {
+    } else if ((userHand === 2 && pcHand === 0)
+        || (userHand === 1 && pcHand === 2)
+        || (userHand === 0 && pcHand === 1)) {
       return 1;
     }
   }
