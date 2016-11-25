@@ -22,8 +22,6 @@ import { RPSService } from './services/rps.service';
         MainformComponent,
         GamespaceComponent,
         // MaterializeDirective
-        // HomeComponent,
-        // AboutComponent
     ],
     imports: [
         BrowserModule,

@@ -10,10 +10,10 @@ for (let i = 0; i < 3; i++) {
           1: randomInteger(0, 1),
           2: randomInteger(0, 1)
         };
-      };
-    };
-  };
-};
+      }
+    }
+  }
+}
 
 export { arrOfStats };
 

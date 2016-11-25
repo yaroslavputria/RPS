@@ -45,8 +45,8 @@ export class GamespaceComponent {
 
       let assumedUserHand: number = this.rpsService.userHandFromStats(this.arrOfStats, this.currentSituation);
       let pcHand: number = this.rpsService.choseMove(assumedUserHand);
-      let userHand: number = this.getUserHand(event.currentTarget.id);
-      let resOfMove: number = this.getResOfMove(userHand, pcHand);
+      let userHand: number = this.rpsService.getUserHand(event.currentTarget.id);
+      let resOfMove: number = this.rpsService.getResOfMove(userHand, pcHand);
 
       this.renderHands(userHand, pcHand, userHandElement, pcHandElement);
 
@@ -64,23 +64,6 @@ export class GamespaceComponent {
     }
   }
 
-  getUserHand(optionId: string): number {
-    return Number(optionId.substr(3));
-  }
-
-  getResOfMove(userHand: number, pcHand: number): number {
-    if (pcHand === userHand) {
-      return 2;
-    } else if ((userHand === 0 && pcHand === 2)
-        || (userHand === 2 && pcHand === 1)
-        || (userHand === 1 && pcHand === 0)) {
-      return 0;
-    } else if ((userHand === 2 && pcHand === 0)
-        || (userHand === 1 && pcHand === 2)
-        || (userHand === 0 && pcHand === 1)) {
-      return 1;
-    }
-  }
 
   processResOfMove(res: number): void {
     if (res === 0) {
