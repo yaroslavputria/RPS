@@ -15,26 +15,7 @@ for (let i = 0; i < 3; i++) {
   };
 };
 
-// тимчасовий масив ходів
-let arrOfMoves: any[] = [];
-for (let i = 0; i < 20; i++) {
-  arrOfMoves.push('' + randomInteger(0, 2) + randomInteger(0, 2));
-};
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-export { arrOfStats, arrOfMoves };
+export { arrOfStats };
 
 function randomInteger(min: number, max: number): number {
   let rand = min + Math.random() * (max - min);

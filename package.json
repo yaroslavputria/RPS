@@ -37,6 +37,7 @@
     "@types/node": "^6.0.45",
     "@types/protractor": "^1.5.20",
     "@types/selenium-webdriver": "2.44.29",
+    "angular-cli-github-pages": "^0.2.0",
     "codelyzer": "0.0.17",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.23.1",

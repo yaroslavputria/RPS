@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { arrOfStats, arrOfMoves } from '../services/tmpSourceData';
+import { arrOfStats } from '../services/tmpSourceData';
 
 import { RPSService } from '../services/rps.service';
 
@@ -12,7 +12,6 @@ export class GamespaceComponent {
   constructor(private rpsService: RPSService) {}
 
   arrOfStats: any[] = arrOfStats;
-  arrOfMoves: any[] = arrOfMoves;
   currentSituation: string = '' + this.rpsService.randomInteger(0, 2)
     + this.rpsService.randomInteger(0, 2)
     + this.rpsService.randomInteger(0, 2)
@@ -105,13 +104,13 @@ export class GamespaceComponent {
       userHandElement.classList.add('fa-hand-scissors-o', 'fa-flip-horizontal');
     }
 
-    pcHandElement.classList.remove('fa-diamond', 'fa-file-o', 'fa-scissors', 'fa-flip-horizontal', 'fa-desktop');
+    pcHandElement.classList.remove('fa-hand-rock-o', 'fa-hand-paper-o', 'fa-hand-scissors-o', 'fa-flip-horizontal', 'fa-desktop');
     if (pcHand === 0) {
-      pcHandElement.classList.add('fa-diamond');
+      pcHandElement.classList.add('fa-hand-rock-o');
     } else if (pcHand === 1) {
-      pcHandElement.classList.add('fa-file-o');
+      pcHandElement.classList.add('fa-hand-paper-o');
     } else if (pcHand === 2) {
-      pcHandElement.classList.add('fa-scissors', 'fa-flip-horizontal');
+      pcHandElement.classList.add('fa-hand-scissors-o');
     }
   }
 
