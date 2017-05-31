@@ -5,12 +5,12 @@ import '../css/materialize.css';
 import '../css/main.css';
 
 @Component({
-  selector: 'rps-app',
-  template: require('./app.component.html')
+    selector: 'rps-app',
+    template: require('./app.component.html')
 })
 export class AppComponent implements OnInit {
-  // constructor(){}
-  ngOnInit(): void {
+    // constructor(){}
+    ngOnInit(): void {
 
-  }
+    }
 }
