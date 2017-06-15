@@ -6,6 +6,7 @@
     "suppressImplicitAnyIndexErrors": true,
     "rootDir": "./src",
     "emitDecoratorMetadata": true,
+    "sourceMap": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "typeRoots": [ "./node_modules/@types" ],
