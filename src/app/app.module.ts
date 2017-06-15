@@ -31,7 +31,8 @@ import { RPSService } from './services/rps.service';
         appRoutingProviders,
         RPSService
     ],
-    bootstrap: [ AppComponent ]
+    bootstrap: [ AppComponent ],
+    //exports:[]
 })
 
 export class AppModule {

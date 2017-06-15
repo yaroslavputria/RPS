@@ -9,7 +9,13 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "typeRoots": [ "./node_modules/@types" ],
-    "types": [ "jasmine", "node", "core-js", "protractor"]
+    "types": [ "jasmine", "node", "protractor"],
+    "lib": [
+            "es2015",
+            "es5",
+            "dom",
+            "scripthost"
+        ]
   },
   "exclude": [
     "node_modules"
