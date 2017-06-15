@@ -32,7 +32,7 @@ import { RPSService } from './services/rps.service';
         RPSService
     ],
     bootstrap: [ AppComponent ],
-    //exports:[]
+    // exports:[]
 })
 
 export class AppModule {
