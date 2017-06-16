@@ -7,9 +7,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { routing, appRoutingProviders } from './app.routing';
 
 import { AppComponent } from './app.component';
-import { MaincardComponent } from './maincard/maincard.component';
-import { MainformComponent } from './mainform/mainform.component';
-import { GamespaceComponent } from './gamespace/gamespace.component';
+import { MaincardComponent } from './components/maincard/maincard.component';
+import { MainformComponent } from './components/mainform/mainform.component';
+import { GamespaceComponent } from './components/gamespace/gamespace.component';
+import { AlertCmp } from './components/alert/alert.cmp';
 
 // import { MaterializeDirective } from "angular2-materialize";
 
@@ -21,6 +22,7 @@ import { RPSService } from './services/rps.service';
         MaincardComponent,
         MainformComponent,
         GamespaceComponent,
+        AlertCmp
         // MaterializeDirective
     ],
     imports: [

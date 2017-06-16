@@ -1,9 +1,9 @@
 import { ModuleWithProviders }  from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { MaincardComponent } from './maincard/maincard.component';
-import { MainformComponent } from './mainform/mainform.component';
-import { GamespaceComponent } from './gamespace/gamespace.component';
+import { MaincardComponent } from './components/maincard/maincard.component';
+import { MainformComponent } from './components/mainform/mainform.component';
+import { GamespaceComponent } from './components/gamespace/gamespace.component';
 
 const appRoutes: Routes = [
   { path: '#', component: MaincardComponent }, // temporary route

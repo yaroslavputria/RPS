@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
-import { arrOfStats } from '../services/tmpSourceData';
+import { arrOfStats } from '../../services/tmpSourceData';
 
-import { RPSService } from '../services/rps.service';
+import { RPSService } from '../../services/rps.service';
 
 @Component({
     selector: 'gamespace',

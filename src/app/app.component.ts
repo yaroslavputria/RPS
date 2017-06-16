@@ -9,6 +9,8 @@ import '../css/main.css';
     template: require('./app.component.html')
 })
 export class AppComponent implements OnInit {
+    message: string = 'Hello, world!!!';
+    header: string = 'Angular says:';
     // constructor(){}
     ngOnInit(): void {
 
