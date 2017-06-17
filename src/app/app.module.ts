@@ -10,11 +10,13 @@ import { AppComponent } from './app.component';
 import { MaincardComponent } from './components/maincard/maincard.component';
 import { MainformComponent } from './components/mainform/mainform.component';
 import { GamespaceComponent } from './components/gamespace/gamespace.component';
-import { AlertCmp } from './components/alert/alert.cmp';
+import { AlertCmp } from './alert/alert.cmp';
 
 // import { MaterializeDirective } from "angular2-materialize";
 
 import { RPSService } from './services/rps.service';
+import { AlertService } from './alert/alert.service';
+
 
 @NgModule({
     declarations: [
@@ -31,7 +33,8 @@ import { RPSService } from './services/rps.service';
     ],
     providers: [
         appRoutingProviders,
-        RPSService
+        RPSService,
+        AlertService
     ],
     bootstrap: [ AppComponent ],
     // exports:[]

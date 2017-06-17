@@ -3,13 +3,14 @@ import { Component } from '@angular/core';
 import { arrOfStats } from '../../services/tmpSourceData';
 
 import { RPSService } from '../../services/rps.service';
+import { AlertService } from '../../alert/alert.service';
 
 @Component({
     selector: 'gamespace',
     template: require('./gamespace.component.html')
 })
 export class GamespaceComponent {
-    constructor(private rpsService: RPSService) {}
+    constructor(private rpsService: RPSService, private alertService: AlertService) {}
 
     arrOfStats: any[] = arrOfStats;
     currentSituation: string = '' + this.rpsService.randomInteger(0, 2)
@@ -69,11 +70,14 @@ export class GamespaceComponent {
         if (res === 0) {
             this.userScore++;
             this.bottomMes = 'You won this round!';
+            this.alertService.show('Result:', 'You won this round!');
         } else if (res === 1) {
             this.pcScore++;
             this.bottomMes = 'You lost this round!';
+            this.alertService.show('Result:', 'You lost this round!');
         } else if (res === 2) {
             this.bottomMes = 'It\'s draw!';
+            this.alertService.show('Result:', 'It\'s draw!');
         }
     }
 
